@@ -6,8 +6,3 @@ sudo: false
 latex: false
 
 
-
-r_packages:
-  - covr
-
-

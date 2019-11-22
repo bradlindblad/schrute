@@ -11,8 +11,8 @@ status](https://travis-ci.org/bradlindblad/schrute.svg?branch=master)](https://t
 [![metacran
 downloads](https://cranlogs.r-pkg.org/badges/schrute)](https://cran.r-project.org/package=schrute)
 [![lifecycle](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental)
-[![codecov](https://codecov.io/gh/bradlindblad/schrute/branch/master/graph/badge.svg)](https://codecov.io/gh/bradlindblad/schrute)
-
+[![Codecov test
+coverage](https://codecov.io/gh/bradlindblad/schrute/branch/master/graph/badge.svg)](https://codecov.io/gh/bradlindblad/schrute?branch=master)
 <!-- badges: end -->
 
 The goal of schrute is to …
