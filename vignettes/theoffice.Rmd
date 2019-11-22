@@ -1,0 +1,97 @@
+---
+title: "Using schrute"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Using schrute}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+# What
+This is a package that does/has only one thing: the complete transcriptions of all episodes of [The Office!](https://www.imdb.com/title/tt0386676/)  (US version).
+
+Use this data set to master NLP or text analysis. Let's scratch the surface of the subject with a few examples from the excellent [Text Mining with R](https://www.tidytextmining.com/) book, by Julia Silge and David Robinson.
+
+First install the package from CRAN:
+
+```{r setup}
+library(schrute)
+```
+
+
+There is only one data set with the schrute package; assign it to a variable
+```{r}
+mydata <- schrute::theoffice
+```
+
+Take a peek at the format:
+
+```{r}
+dplyr::glimpse(mydata)
+```
+
+```{r}
+ mydata %>%
+  dplyr::filter(season == '01') %>%
+  dplyr::filter(episode == '01') %>%
+  dplyr::slice(1:3) %>%
+  knitr::kable()
+```
+
+So what we have is the season, episode number and name, character, the line spoken and the line spoken with the stage direction (cue). 
+
+We can tokenize all of the lines with a few lines from the tidytext package:
+```{r}
+token.mydata <- mydata %>%
+  tidytext::unnest_tokens(word, text)
+```
+
+This increases our data set to `r NROW(token.mydata)` records, where each record contains a word from the script.
+
+```{r}
+ token.mydata %>%
+  dplyr::filter(season == '01') %>%
+  dplyr::filter(episode == '01') %>%
+  dplyr::slice(1:3) %>%
+  knitr::kable()
+```
+
+If we want to analyze the entire data set, we need to remove some stop words first:
+```{r}
+stop_words <- tidytext::stop_words
+
+tidy.token.mydata <- token.mydata %>%
+  dplyr::anti_join(stop_words, by = "word")
+```
+
+And then see what the most common words are:
+```{r}
+tidy.token.mydata %>%
+  dplyr::count(word, sort = TRUE) 
+```
+
+```{r}
+tidy.token.mydata %>%
+  dplyr::count(word, sort = TRUE) %>%
+  dplyr::filter(n > 400) %>%
+  dplyr::mutate(word = stats::reorder(word, n)) %>%
+  ggplot2::ggplot(ggplot2::aes(word, n)) +
+  ggplot2::geom_col() +
+  ggplot2::xlab(NULL) +
+  ggplot2::coord_flip() +
+  ggplot2::theme_minimal()
+```
+
+Feel free to keep going with this. Now that you have the time line (episode, season) and the character for each line and word in the series, you can perform an unlimited number of analyses. Some ideas:
+- Sentiment by character
+- Sentiment by character by season
+- Narcissism by season (ahem.. Nard Dog season 8-9)
+- Lines by character
+- Etc.

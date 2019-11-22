@@ -1,27 +1,35 @@
 Package: schrute
 Title: The Entire Transcript from The Office in Tidy Format
-Version: 0.0.0.9000
+Version: 0.1.0
 Authors@R: 
     person(given = "Brad",
            family = "Lindblad",
            role = c("aut", "cre"),
            email = "bradley.lindblad@gmail.com")
-Description: Analyze and have fun with the text from the best series of all time.
+Description: Analyze and have fun with the text from the best
+    series of all time.
 License: MIT + file LICENSE
-Depends: R (>= 2.10)
+URL: https://github.com/bradlindblad/schrute
+BugReports: https://github.com/bradlindblad/schrute/issues
+Depends: 
+    R (>= 2.10)
 Imports: 
     dplyr,
+    ggplot2,
     magrittr,
     stringi,
     stringr,
     tibble,
-    tidyr
+    tidyr,
+    tidytext
+Suggests: 
+    covr,
+    knitr,
+    rmarkdown,
+    testthat (>= 2.1.0)
+VignetteBuilder: 
+    knitr
 Encoding: UTF-8
 LazyData: true
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 6.1.1
-URL: https://github.com/bradlindblad/schrute
-BugReports: https://github.com/bradlindblad/schrute/issues
-Suggests: 
-    testthat (>= 2.1.0),
-    covr
