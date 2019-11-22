@@ -1,5 +1,5 @@
 Package: schrute
-Title: The Entire Transcript from The Office in Tidy Format
+Title: The Entire Transcript from 'The Office' in Tidy Format
 Version: 0.1.0
 Authors@R: 
     person(given = "Brad",

@@ -26,7 +26,7 @@ theoffice <- final %>%
   dplyr::select(index, season, episode, episode_name, character, text, text_w_direction) %>%
   dplyr::filter(!stringi::stri_detect(str = episode_name, regex = "Webisode")) %>%
   dplyr::filter(!stringi::stri_detect(str = episode_name, regex = "Deleted")) %>%
-  dplyr::filter(!stringi::stri_detect(str = episode_name, regex = "Gag")) %>%
+  dplyr::filter(!stringi::stri_detect(str = episode_name, regex = "Deleted")) %>%
   tidyr::drop_na() %>%
   dplyr::arrange(season) %>%
   dplyr::arrange(episode)
