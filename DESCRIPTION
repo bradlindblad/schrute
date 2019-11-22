@@ -1,0 +1,22 @@
+Package: schrute
+Title: The Entire Transcript from The Office in Tidy Format
+Version: 0.0.0.9000
+Authors@R: 
+    person(given = "Bradley",
+           family = "Lindblad",
+           role = c("aut", "cre"),
+           email = "bradley.lindblad@gmail.com")
+Description: Analyze and have fun with the text from the best series of all time.
+License: MIT + file LICENSE
+Depends: R (>= 2.10)
+Imports: 
+    dplyr,
+    magrittr,
+    stringi,
+    stringr,
+    tibble,
+    tidyr
+Encoding: UTF-8
+LazyData: true
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 6.1.1
