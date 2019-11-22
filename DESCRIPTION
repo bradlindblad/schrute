@@ -2,7 +2,7 @@ Package: schrute
 Title: The Entire Transcript from The Office in Tidy Format
 Version: 0.0.0.9000
 Authors@R: 
-    person(given = "Bradley",
+    person(given = "Brad",
            family = "Lindblad",
            role = c("aut", "cre"),
            email = "bradley.lindblad@gmail.com")
