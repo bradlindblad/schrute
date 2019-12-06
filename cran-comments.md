@@ -1,6 +1,5 @@
 ## Resubmission comments
-* Removed single quotes from the title in DESCRIPTION
-* Elaborated on what the package does in the description in DESCRIPTION
+* Changed 'The Office' to 'the Office' in DESCRIPTION file
 
 ## Test environments
 * local OS X install, R 3.6.1
