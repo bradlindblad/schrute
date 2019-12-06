@@ -1,3 +1,7 @@
+## Resubmission comments
+* Removed single quotes from the title in DESCRIPTION
+* Elaborated on what the package does in the description in DESCRIPTION
+
 ## Test environments
 * local OS X install, R 3.6.1
 * ubuntu 14.04 (on travis-ci), R 3.6.1
