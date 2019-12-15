@@ -23,8 +23,7 @@ You can install the released version of schrute from
 [CRAN](https://CRAN.R-project.org) with:
 
 ``` r
-#install.packages("schrute")
-devtools::install_github("bradlindblad/schrute")
+install.packages("schrute")
 ```
 
 ## Usage
