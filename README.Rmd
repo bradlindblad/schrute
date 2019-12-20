@@ -38,27 +38,15 @@ install.packages("schrute")
 The schrute package has one and only one purpose: share the complete script transcription for The Office (US) television show. Users are encouraged to use the tidy text data for exploration, learning and fun.
 
 Check out the data like so:
-```
+```{r}
+library(schrute)
+library(tibble)
+
 schrute::theoffice
 ```
 
-Returns:
-
+Or view the short vignette with:
 ```
-# A tibble: 16,801 x 7
-   index season episode episode_name  actor text        text_w_direction     
-   <int> <chr>  <chr>   <chr>         <chr> <chr>       <chr>                
- 1     1 01     01      " Pilot"      Mich… " All righ… " All right Jim. You…
- 2     2 02     01      " Diversity … Mich… " Hey, uh,… " Hey, uh, can I hel…
- 3     3 03     01      " Health Car… Mich… " Pam. Pam… " Pam. Pamela. Pam-e…
- 4     4 04     01      " The Allian… Dwig… " Michael!… " Michael!?"         
- 5     5 05     01      " Basketball" Mich… " Hey, you… " [to Jim] Hey, you …
- 6     6 06     01      " Hot Girl"   Jan   " Are you … " Are you listening …
- 7     7 06     01      " Hot Girl"   Roy   " Huh? huh… " Huh? huh? Come on.…
- 8     8 01     02      " The Dundie… Mich… " Tonight … " Tonight is the Dun…
- 9     9 01     02      " The Dundie… Jim   " What a g… " What a great year …
-10    10 02     02      " Sexual Har… Mich… " Hey, wha… " [clears throat] He…
-# … with 16,791 more rows
+vignette("theoffice")
 ```
-
 

@@ -1,8 +1,8 @@
 ## Resubmission comments
-* Changed 'The Office' to 'the Office' in DESCRIPTION file
+* Minor bug fix
 
 ## Test environments
-* local OS X install, R 3.6.1
+* local Linux Mint 19.3, R 3.6.1
 * ubuntu 14.04 (on travis-ci), R 3.6.1
 * win-builder (devel and release)
 
@@ -10,4 +10,4 @@
 
 0 errors | 0 warnings | 0 notes
 
-* This is a new release.
+

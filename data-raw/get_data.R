@@ -22,14 +22,17 @@ theoffice <- final %>%
   dplyr::mutate(episode_name = stringr::str_split(ep, "-")[[1]][2]) %>%
   dplyr::select(-ep) %>%
   dplyr::rename(text_w_direction = text) %>%
-  dplyr::mutate(text = sub("\\[.*] ", "", text_w_direction)) %>%
+  # dplyr::mutate(text = sub("\\[.*] ", "", text_w_direction)) %>%
+  dplyr::mutate(text = gsub(" *\\[.*?\\] *","",as.character(text_w_direction))) %>%
   dplyr::select(index, season, episode, episode_name, character, text, text_w_direction) %>%
   dplyr::filter(!stringi::stri_detect(str = episode_name, regex = "Webisode")) %>%
   dplyr::filter(!stringi::stri_detect(str = episode_name, regex = "Deleted")) %>%
   dplyr::filter(!stringi::stri_detect(str = episode_name, regex = "Deleted")) %>%
   tidyr::drop_na() %>%
+  dplyr::arrange(episode) %>%
   dplyr::arrange(season) %>%
-  dplyr::arrange(episode)
+  dplyr::mutate(index = seq(1, nrow(theoffice), 1))
+
 
 usethis::use_data(theoffice, overwrite = TRUE)
 
