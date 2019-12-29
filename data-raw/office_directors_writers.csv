@@ -1,0 +1,187 @@
+season,episode,director,writer,staff_writer
+01,01,Ken Kwapis,Ricky Gervais;Stephen Merchant;Greg Daniels,
+01,02,Ken Kwapis,B.J. Novak,Mindy Kaling
+01,03,Ken Whittingham,Paul Lieberstein,Mindy Kaling
+01,04,Bryan Gordon,Michael Schur,Mindy Kaling
+01,05,Greg Daniels,Greg Daniels,Mindy Kaling
+01,06,Amy Heckerling,Mindy Kaling,Mindy Kaling
+02,01,Greg Daniels,Mindy Kaling,
+02,02,Ken Kwapis,B.J. Novak,
+02,03,Paul Feig,Michael Schur,
+02,04,Ken Kwapis,B.J. Novak,
+02,05,Paul Feig,Greg Daniels,
+02,06,Ken Kwapis,Gene Stupnitsky;Lee Eisenberg,
+02,07,Greg Daneils,Paul Lieberstein,
+02,08,Paul Feig,Larry Willmore,
+02,09,Paul Feig,Jennifer Celotta,
+02,10,Charles McDougall,Michael Schur,
+02,11,Ken Kwapis,Greg Daniels,
+02,12,Bryan Gordon,Mindy Kaling,
+02,13,Dennie Gordon,Lee Eisenberg;Gene Stupnitsky,
+02,14,Victor Nelli Jr.,Paul Lieberstein,
+02,15,Dennie Gordon,B.J. Novak,
+02,16,Greg Daniels,Michael Schur,
+02,17,Charles McDougal,Paul Lieberstein,
+02,18,Victor Nelli Jr.,Mindy Kaling,
+02,19,Ken Wittingham,Gene Stupnitsky;Lee Eisenberg,
+02,20,Greg Daniels,Jennifer Celotta,
+02,21,Greg Daniels,Greg Daniels,
+02,22,Greg Daniels,Steve Carell,
+03,01,Ken Kwapis,Greg Daniels,Caroline Williams
+03,02,Ken Whittingham,Lee Eisenberg;Gene Stupnitsky,Caroline Williams
+03,03,Greg Daniels,Paul Lieberstein,Caroline Williams
+03,04,Roger Nygard,Jennifer Celotta,Caroline Williams
+03,05,Randall Einhorn,B.J. Novak,Caroline Williams
+03,06,Miguel Arteta,Mindy Kaling,Caroline Williams
+03,07,Tucker Gates,Michael Schur,Caroline Williams
+03,08,Ken Whittingham,Brent Forrester,Caroline Williams
+03,09,Jeffrey Blitz,Ricky Gervais;Stephen Merchant,Caroline Williams
+03,10,Harold Ramis,Jennifer Celotta,Caroline Williams
+03,12,Julian Farino,Justin Spitzer,Caroline Williams
+03,13,Greg Daniels,Michael Schur;Lee Eisenberg;Gene Stupnitsky,Caroline Williams
+03,14,Greg Daniels,Lee Eisenberg;Gene Stupnitsky;Michael Schur,Caroline Williams
+03,15,Randall Einhorn,Mindy Kaling,Caroline Williams
+03,16,Ken Whittingham,Caroline Williams,Caroline Williams
+03,17,Joss Whedon,Brent Forrester,Caroline Williams
+03,18,J.J. Abrams,Paul Lieberstein,Caroline Williams
+03,19,Jeffrey Blitz,Michael Schur,Caroline Williams
+03,20,Harold Ramis,B.J. Novak,Caroline Williams
+03,21,Randall Einhorn,Brent Forrester;Justin Spitzer,Caroline Williams
+03,22,Tucker Gates,Gene Stupnitsky;Lee Eisenberg,Caroline Williams
+03,23,Harold Ramis,Jennifer Celotta;Greg Daniels,Caroline Williams
+03,24,Ken Kwapis,Paul Lieberstein;Michael Schur,Caroline Williams
+04,01,Greg Daniels,Greg Daniels,Anthony Q. Farrell
+04,03,Craig Zisk,Michael Schur,Anthony Q. Farrell
+04,05,Ken Whittingham,Jennifer Celotta,Anthony Q. Farrell
+04,07,Paul Lieerstein,Paul Lieberstein,Anthony Q. Farrell
+04,09,Jason Reitman,B.J. Novak,Anthony Q. Farrell
+04,10,Joss Whedon,Mindy Kaling,Anthony Q. Farrell
+04,11,Paul Feig,Steve Carell,Anthony Q. Farrell
+04,12,Julian Farino,Lester Lewis,Anthony Q. Farrell
+04,13,Paul Feig,Gene Stupnitsky;Lee Eisenberg,Anthony Q. Farrell
+04,14,Jeffrey Blitz,B.J. Novak,Anthony Q. Farrell
+04,15,Ken Whittingham,Mindy Kaling,Anthony Q. Farrell
+04,16,Randall Einhorn,Brent Forrester;Justin Spitzer,Anthony Q. Farrell
+04,17,Tucker Gates,Lee Eisenberg;Gene Stupnitsky,Anthony Q. Farrell
+04,18,Paul Feig,Jennifer Celotta;Paul Lieberstein,Anthony Q. Farrell
+05,01,Paul Feig,Lee Eisenberg;Gene Stupnitsky,
+05,03,Jeffrey Blitz,Ryan Koh,
+05,04,Greg Daniels,Aaron Shure,
+05,05,Jennifer Celotta,Charlie Grandy,
+05,06,David Rogers,Anthony Q. Farrell,
+05,07,Stephen Merchant,Lester Lewis,
+05,08,Randall Einhorn,Brent Forrester,
+05,09,Jason Reitman,Mindy Kaling,
+05,10,Paul Feig,Gene Stupnitsky;Lee Eisenberg,
+05,11,Paul Feig,Justin Spitzer,
+05,12,Dean Holland,Jennifer Celotta,
+05,13,Asaad Kelada,B.J. Novak,
+05,14,Jeffrey Blitz,Paul Lieberstein,
+05,16,Ken Kwapis,Mindy Kaling,
+05,17,Ken Kwapis,Mindy Kaling,
+05,18,Randall Einhorn,Brent Forrester,
+05,19,Randall Einhorn,Mindy Kaling,
+05,20,Paul Feig,Lee Eisenberg;Gene Stupnitsky,
+05,21,Paul Lieberstein,Aaron Shure,
+05,22,Paul Feig,B.J. Novak,
+05,23,Gene Stupnitsky;Lee Eisenberg,Justin Spitzer,
+05,24,Ken Whittingham,Ryan Koh,
+05,25,Steve Carell,Charlie Grandy,
+05,26,Brent Forrester,Anthony Q. Farrell,
+05,27,Randall Einhorn,Warren Lieberstein;Halsted Sullivan,
+05,28,Ken Kwapis,Jennifer Celotta;Paul Lieberstein,
+06,01,Paul Lieberstein,Paul Lieberstein,
+06,02,Randall Einhorn,Aaron Shure,
+06,03,Jennifer Celotta,Jennifer Celotta,
+06,04,Paul Feig,Greg Daniels;Mindy Kaling,
+06,06,David Rogers,Brent Forrester,
+06,07,Lee Eisenberg;Gene Stupnitsky,Lee Eisenberg;Gene Stupnitsky,
+06,08,Reginald Hudlin,Warren Lieberstein;Halsted Sullivan,
+06,09,Seth Gordon,Charlie Grandy,
+06,10,Greg Daniels,Daniel Chun,
+06,11,Charles McDougall,Justin Spitzer,
+06,12,B.J. Novak,Gene Stupnitsky;Lee Eisenberg,
+06,13,Randall Einhorn,Mindy Kaling,
+06,14,Jeffrey Blitz,Jason Kessler,
+06,15,John Krasinski,Jennifer Celotta,
+06,16,Marc Webb,Mindy Kaling,
+06,17,Seth Gordon;Harold Ramis,Daniel Chun;Charlie Grandy,
+06,19,Randall Einhorn,Jonathan Huges,
+06,20,Brent Forrester,Brent Forrester,
+06,21,Matt Sohn,B.J. Novak,
+06,22,Steve Carell,Mindy Kaling,
+06,23,Mindy Kaling,Justin Spitzer,
+06,24,Rainn Wilson,Gene Stupnitsky;Lee Eisenberg,
+06,25,Randall Einhorn,Aaron Shure,
+06,26,Paul Lieberstein,Warren Lieberstein;Halsted Sullivan,
+07,01,Jeffrey Blitz,Daniel Chun,
+07,02,Jeffrey Blitz,B.J. Novak,
+07,03,John Scott,Charlie Grandy,
+07,04,Paul Lieberstein,Paul Lieberstein,
+07,05,Randall Einhorn,Mindy Kaling,
+07,06,Dean Holland,Justin Spitzer,
+07,07,Alex Hardcastle,Peter Ocko,
+07,08,Ken Whittingham,Jon Vitti,
+07,09,Danny Leiner,Aaron Shure,
+07,10,Charles McDougall,Halsted Sullivan;Warren Lieberstein,
+07,11,Rainn Wilson,Mindy Kaling,
+07,13,David Rogers,Carrie Kemper,
+07,14,B.J. Novak,Steve Hely,
+07,15,Michael Spiller,Brent Forrester,
+07,16,Greg Daniels,Robert Padnick,
+07,17,Tucker Gates,B.J. Novak,
+07,18,Randall Einhorn,Amelie Gillette,
+07,19,Steve Carell,Jon Vitti,
+07,20,Paul Lieberstein,Daniel Chun,
+07,21,Mindy Kaling,Mindy Kaling,
+07,22,Paul Feig,Greg Daniels,
+07,23,Matt Sohn,Charlie Grandy,
+07,24,Troy Miller,Justin Spitzer,
+07,25,Jeffrey Blitz,Paul Lieberstein,
+08,01,B.J. Novak,B.J. Novak,
+08,02,Charles McDougall,Paul Lieberstein,
+08,03,John Krasinski,Charlie Grandy,
+08,04,David Rogers,Justin Spitzer,
+08,05,Randall Einhorn,Carrie Kemper,
+08,06,Troy Miller,Daniel Chun,
+08,07,Matt Sohn,Allison Silverman,
+08,08,Jeffrey Blitz,Robert Padnick,
+08,09,Charlie Grandy,Dan Greaney,
+08,10,Ed Helms,Mindy Kaling,
+08,11,B.J. Novak,Steve Hely,
+08,12,Charles McDougall,Owen Ellickson,
+08,13,Eric Appel,Aaron Shure,
+08,14,David Rogers,Amelie Gillette,
+08,15,Matt Sohn,Daniel Chun,
+08,16,Brian Baumgartner,Halsted Sullivan'Warren Lieberstein,
+08,17,Brent Forrester,Mindy Kaling,
+08,18,Matt Sohn,Robert Padnick,
+08,19,Rainn Wilson,Charlie Grandy,
+08,20,Ed Helms,Steve Hely,
+08,21,Claire Scanlon,Justin Spitzer,
+08,22,David Rogers,Owen Ellickson,
+08,23,Daniel Chun,Warren Lieberstein;Halsted Sullivan,
+08,24,B.J. Novak,B.J. Novak,
+09,01,Greg Daniels,Greg Daniels,
+09,02,Matt Sohn,Allison Silverman,
+09,03,David Rogers,Jonathan Green;Gabe Miller,
+09,04,Bryan Cranston,Brent Forrester,
+09,05,Claire Scanlong,Owen Ellickson,
+09,06,John Krasinski,Dan Sterling,
+09,07,Rodman Flender,Carrie Kemper,
+09,08,Brent Forrester,Graham Wagner,
+09,09,Charles McDougall,Robert Padnick,
+09,10,Rodman Flender,Nicki Schwartz-Wright,
+09,11,Matt Sohn,Dan Greaney,
+09,12,Kelly Cantley-Kashima,Jonathan Green;Gabe Miller,
+09,13,David Rogers,Carrie Kemper,
+09,14,Lee Kirk,Owen Ellickson,
+09,15,Troy Miller,Allison Silverman,
+09,16,Jon Favreau,Graham Wagner,
+09,17,Paul Lieberstein,Paul Lieberstein,
+09,18,Jennifer Celotta,Tim McAuliffe,
+09,19,Matt Sohn,Dan Sterling,
+09,20,Jesse Peretz,Halsted Sullivan;Warren Lieberstein,
+09,21,Jeffrey Blitz,Nicki Schwartz-Wright,
+09,22,David Rogers,Brent Forrester,
+09,24,Ken Kwapis,Greg Daniels,
