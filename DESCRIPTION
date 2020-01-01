@@ -2,12 +2,16 @@ Package: schrute
 Title: The Entire Transcript from the Office in Tidy Format
 Version: 0.1.1
 Authors@R: 
-    person(given = "Brad",
-           family = "Lindblad",
-           role = c("aut", "cre"),
-           email = "bradley.lindblad@gmail.com")
-Description: The complete scripts from the American version of the Office television show in tibble format. Use this package to analyze and have fun with text from the best
-    series of all time.
+    c(person(given = "Brad",
+             family = "Lindblad",
+             role = c("aut", "cre"),
+             email = "bradley.lindblad@gmail.com"),
+      person(given = "Lucas",
+             family = "Graybuck",
+             role = "ctb"))
+Description: The complete scripts from the American version of
+    the Office television show in tibble format. Use this package to
+    analyze and have fun with text from the best series of all time.
 License: MIT + file LICENSE
 URL: https://github.com/bradlindblad/schrute
 BugReports: https://github.com/bradlindblad/schrute/issues

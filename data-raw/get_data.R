@@ -16,7 +16,8 @@ directors_writers <- read.csv("data-raw/office_directors_writers.csv",
 theoffice <- final %>%
   tidyr::separate(text, c("ep", "txt"), sep = ";") %>%
   tidyr::drop_na() %>%
-  dplyr::mutate(character = stringi::stri_extract_first_words(txt)) %>%
+  # dplyr::mutate(character = stringi::stri_extract_first_words(txt)) %>%
+  dplyr::mutate(character = stringr::word(txt, 1, sep = "\\:")) %>%
   dplyr::rowwise() %>%
   dplyr::mutate(text = stringr::str_split(txt, ":")[[1]][2]) %>%
   dplyr::select(-txt) %>%
@@ -42,7 +43,7 @@ theoffice <- final %>%
   dplyr::mutate(episode_name = ifelse(season == "02" & episode == "09",
                                       "E-Mail Surveilance",
                                       episode_name)) %>%
-  select(index,season,episode,
+  select(index,season,episode, episode_name,
          director,writer,
          character,text,text_w_direction)
 
