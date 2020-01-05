@@ -178,7 +178,7 @@
 <p>We can tokenize all of the lines with a few lines from the tidytext package:</p>
 <div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb5-1" data-line-number="1">token.mydata &lt;-<span class="st"> </span>mydata <span class="op">%&gt;%</span></a>
 <a class="sourceLine" id="cb5-2" data-line-number="2"><span class="st">  </span>tidytext<span class="op">::</span><span class="kw"><a href="https://rdrr.io/pkg/tidytext/man/unnest_tokens.html">unnest_tokens</a></span>(word, text)</a></code></pre></div>
-<p>This increases our data set to 570450 records, where each record contains a word from the script.</p>
+<p>This increases our data set to 570566 records, where each record contains a word from the script.</p>
 <div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb6-1" data-line-number="1"> token.mydata <span class="op">%&gt;%</span></a>
 <a class="sourceLine" id="cb6-2" data-line-number="2"><span class="st">  </span>dplyr<span class="op">::</span><span class="kw"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span>(season <span class="op">==</span><span class="st"> '01'</span>) <span class="op">%&gt;%</span></a>
 <a class="sourceLine" id="cb6-3" data-line-number="3"><span class="st">  </span>dplyr<span class="op">::</span><span class="kw"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span>(episode <span class="op">==</span><span class="st"> '01'</span>) <span class="op">%&gt;%</span></a>
@@ -240,20 +240,20 @@
 <p>And then see what the most common words are:</p>
 <div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb8-1" data-line-number="1">tidy.token.mydata <span class="op">%&gt;%</span></a>
 <a class="sourceLine" id="cb8-2" data-line-number="2"><span class="st">  </span>dplyr<span class="op">::</span><span class="kw"><a href="https://dplyr.tidyverse.org/reference/tally.html">count</a></span>(word, <span class="dt">sort =</span> <span class="ot">TRUE</span>) </a>
-<a class="sourceLine" id="cb8-3" data-line-number="3"><span class="co">#&gt; # A tibble: 18,946 x 2</span></a>
+<a class="sourceLine" id="cb8-3" data-line-number="3"><span class="co">#&gt; # A tibble: 19,041 x 2</span></a>
 <a class="sourceLine" id="cb8-4" data-line-number="4"><span class="co">#&gt;    word        n</span></a>
 <a class="sourceLine" id="cb8-5" data-line-number="5"><span class="co">#&gt;    &lt;chr&gt;   &lt;int&gt;</span></a>
-<a class="sourceLine" id="cb8-6" data-line-number="6"><span class="co">#&gt;  1 yeah     2930</span></a>
-<a class="sourceLine" id="cb8-7" data-line-number="7"><span class="co">#&gt;  2 hey      2232</span></a>
+<a class="sourceLine" id="cb8-6" data-line-number="6"><span class="co">#&gt;  1 yeah     2928</span></a>
+<a class="sourceLine" id="cb8-7" data-line-number="7"><span class="co">#&gt;  2 hey      2231</span></a>
 <a class="sourceLine" id="cb8-8" data-line-number="8"><span class="co">#&gt;  3 michael  1859</span></a>
-<a class="sourceLine" id="cb8-9" data-line-number="9"><span class="co">#&gt;  4 uh       1459</span></a>
-<a class="sourceLine" id="cb8-10" data-line-number="10"><span class="co">#&gt;  5 gonna    1399</span></a>
-<a class="sourceLine" id="cb8-11" data-line-number="11"><span class="co">#&gt;  6 dwight   1340</span></a>
+<a class="sourceLine" id="cb8-9" data-line-number="9"><span class="co">#&gt;  4 uh       1458</span></a>
+<a class="sourceLine" id="cb8-10" data-line-number="10"><span class="co">#&gt;  5 gonna    1398</span></a>
+<a class="sourceLine" id="cb8-11" data-line-number="11"><span class="co">#&gt;  6 dwight   1339</span></a>
 <a class="sourceLine" id="cb8-12" data-line-number="12"><span class="co">#&gt;  7 jim      1168</span></a>
-<a class="sourceLine" id="cb8-13" data-line-number="13"><span class="co">#&gt;  8 time     1147</span></a>
+<a class="sourceLine" id="cb8-13" data-line-number="13"><span class="co">#&gt;  8 time     1146</span></a>
 <a class="sourceLine" id="cb8-14" data-line-number="14"><span class="co">#&gt;  9 pam      1044</span></a>
 <a class="sourceLine" id="cb8-15" data-line-number="15"><span class="co">#&gt; 10 guys      945</span></a>
-<a class="sourceLine" id="cb8-16" data-line-number="16"><span class="co">#&gt; # … with 18,936 more rows</span></a></code></pre></div>
+<a class="sourceLine" id="cb8-16" data-line-number="16"><span class="co">#&gt; # … with 19,031 more rows</span></a></code></pre></div>
 <div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb9-1" data-line-number="1">tidy.token.mydata <span class="op">%&gt;%</span></a>
 <a class="sourceLine" id="cb9-2" data-line-number="2"><span class="st">  </span>dplyr<span class="op">::</span><span class="kw"><a href="https://dplyr.tidyverse.org/reference/tally.html">count</a></span>(word, <span class="dt">sort =</span> <span class="ot">TRUE</span>) <span class="op">%&gt;%</span></a>
 <a class="sourceLine" id="cb9-3" data-line-number="3"><span class="st">  </span>dplyr<span class="op">::</span><span class="kw"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span>(n <span class="op">&gt;</span><span class="st"> </span><span class="dv">400</span>) <span class="op">%&gt;%</span></a>
