@@ -15,7 +15,7 @@ vers <- paste("R package version", vers)
 citHeader("To cite the schrute package in publications, please use:")
 
 bibentry(bibtype = "Manual",
-  title = "{scrute}: The Entire Transcript from the Office in Tidy Format",
+  title = "{schrute}: The Entire Transcript from the Office in Tidy Format",
   author = "Brad Lindblad",
   year = year,
   note = vers,
