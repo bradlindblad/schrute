@@ -17,6 +17,8 @@ downloads](https://cranlogs.r-pkg.org/badges/schrute)](https://cran.r-project.or
 
 Analyze and have fun with the text from the best series of all time
 
+Also available in python as the [schrutepy package](https://github.com/bradlindblad/schrutepy)
+
 ## Installation
 
 You can install the released version of schrute from
