@@ -3,7 +3,6 @@
 \docType{package}
 \name{schrute}
 \alias{schrute}
-\alias{schrute-package}
 \title{schrute: The Entire Transcript from The Office in Tidy Format.}
 \description{
 Analyze and have fun with the text from the best series of all time

@@ -47,6 +47,13 @@ theoffice <- final %>%
          director,writer,
          character,text,text_w_direction)
 
+imdb <- read.csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2020/2020-03-17/office_ratings.csv') %>%
+  dplyr::mutate(season = ifelse(nchar(season) < 2, paste0("0", season), season)) %>%
+  dplyr::mutate(episode = ifelse(nchar(episode) < 2, paste0("0", episode), episode))
+
+theoffice <- theoffice %>%
+  dplyr::left_join(imdb, by = c('season', 'episode')) %>%
+  dplyr::select(-title)
 
 usethis::use_data(theoffice, overwrite = TRUE)
 

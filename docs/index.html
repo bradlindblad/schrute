@@ -40,7 +40,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="index.html">schrute</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.1.1</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.2.0</span>
       </span>
     </div>
 
@@ -113,16 +113,19 @@
 <a class="sourceLine" id="cb2-3" data-line-number="3"></a>
 <a class="sourceLine" id="cb2-4" data-line-number="4">tibble<span class="op">::</span><span class="kw"><a href="https://tibble.tidyverse.org/reference/glimpse.html">glimpse</a></span>(schrute<span class="op">::</span>theoffice)</a>
 <a class="sourceLine" id="cb2-5" data-line-number="5"><span class="co">#&gt; Observations: 55,130</span></a>
-<a class="sourceLine" id="cb2-6" data-line-number="6"><span class="co">#&gt; Variables: 9</span></a>
-<a class="sourceLine" id="cb2-7" data-line-number="7"><span class="co">#&gt; $ index            &lt;int&gt; 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, …</span></a>
-<a class="sourceLine" id="cb2-8" data-line-number="8"><span class="co">#&gt; $ season           &lt;chr&gt; "01", "01", "01", "01", "01", "01", "01", "01",…</span></a>
-<a class="sourceLine" id="cb2-9" data-line-number="9"><span class="co">#&gt; $ episode          &lt;chr&gt; "01", "01", "01", "01", "01", "01", "01", "01",…</span></a>
-<a class="sourceLine" id="cb2-10" data-line-number="10"><span class="co">#&gt; $ episode_name     &lt;chr&gt; "Pilot", "Pilot", "Pilot", "Pilot", "Pilot", "P…</span></a>
-<a class="sourceLine" id="cb2-11" data-line-number="11"><span class="co">#&gt; $ director         &lt;chr&gt; "Ken Kwapis", "Ken Kwapis", "Ken Kwapis", "Ken …</span></a>
-<a class="sourceLine" id="cb2-12" data-line-number="12"><span class="co">#&gt; $ writer           &lt;chr&gt; "Ricky Gervais;Stephen Merchant;Greg Daniels", …</span></a>
-<a class="sourceLine" id="cb2-13" data-line-number="13"><span class="co">#&gt; $ character        &lt;chr&gt; "Michael", "Jim", "Michael", "Jim", "Michael", …</span></a>
-<a class="sourceLine" id="cb2-14" data-line-number="14"><span class="co">#&gt; $ text             &lt;chr&gt; "All right Jim. Your quarterlies look very good…</span></a>
-<a class="sourceLine" id="cb2-15" data-line-number="15"><span class="co">#&gt; $ text_w_direction &lt;chr&gt; "All right Jim. Your quarterlies look very good…</span></a></code></pre></div>
+<a class="sourceLine" id="cb2-6" data-line-number="6"><span class="co">#&gt; Variables: 12</span></a>
+<a class="sourceLine" id="cb2-7" data-line-number="7"><span class="co">#&gt; $ index            &lt;int&gt; 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 1…</span></a>
+<a class="sourceLine" id="cb2-8" data-line-number="8"><span class="co">#&gt; $ season           &lt;chr&gt; "01", "01", "01", "01", "01", "01", "01", "01", "01"…</span></a>
+<a class="sourceLine" id="cb2-9" data-line-number="9"><span class="co">#&gt; $ episode          &lt;chr&gt; "01", "01", "01", "01", "01", "01", "01", "01", "01"…</span></a>
+<a class="sourceLine" id="cb2-10" data-line-number="10"><span class="co">#&gt; $ episode_name     &lt;chr&gt; "Pilot", "Pilot", "Pilot", "Pilot", "Pilot", "Pilot"…</span></a>
+<a class="sourceLine" id="cb2-11" data-line-number="11"><span class="co">#&gt; $ director         &lt;chr&gt; "Ken Kwapis", "Ken Kwapis", "Ken Kwapis", "Ken Kwapi…</span></a>
+<a class="sourceLine" id="cb2-12" data-line-number="12"><span class="co">#&gt; $ writer           &lt;chr&gt; "Ricky Gervais;Stephen Merchant;Greg Daniels", "Rick…</span></a>
+<a class="sourceLine" id="cb2-13" data-line-number="13"><span class="co">#&gt; $ character        &lt;chr&gt; "Michael", "Jim", "Michael", "Jim", "Michael", "Mich…</span></a>
+<a class="sourceLine" id="cb2-14" data-line-number="14"><span class="co">#&gt; $ text             &lt;chr&gt; "All right Jim. Your quarterlies look very good. How…</span></a>
+<a class="sourceLine" id="cb2-15" data-line-number="15"><span class="co">#&gt; $ text_w_direction &lt;chr&gt; "All right Jim. Your quarterlies look very good. How…</span></a>
+<a class="sourceLine" id="cb2-16" data-line-number="16"><span class="co">#&gt; $ imdb_rating      &lt;dbl&gt; 7.6, 7.6, 7.6, 7.6, 7.6, 7.6, 7.6, 7.6, 7.6, 7.6, 7.…</span></a>
+<a class="sourceLine" id="cb2-17" data-line-number="17"><span class="co">#&gt; $ total_votes      &lt;int&gt; 3706, 3706, 3706, 3706, 3706, 3706, 3706, 3706, 3706…</span></a>
+<a class="sourceLine" id="cb2-18" data-line-number="18"><span class="co">#&gt; $ air_date         &lt;fct&gt; 2005-03-24, 2005-03-24, 2005-03-24, 2005-03-24, 2005…</span></a></code></pre></div>
 <p>Or view the short vignette with:</p>
 <div class="sourceCode" id="cb3"><pre class="sourceCode R"><code class="sourceCode r"><a class="sourceLine" id="cb3-1" data-line-number="1"><span class="kw"><a href="https://rdrr.io/r/utils/vignette.html">vignette</a></span>(<span class="st">"theoffice"</span>)</a></code></pre></div>
 </div>
