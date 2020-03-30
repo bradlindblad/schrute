@@ -4,4 +4,4 @@
 #'
 #' @docType package
 #' @name schrute
-NULL
+"_PACKAGE"

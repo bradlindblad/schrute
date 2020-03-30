@@ -3,7 +3,25 @@
 \docType{package}
 \name{schrute}
 \alias{schrute}
+\alias{schrute-package}
 \title{schrute: The Entire Transcript from The Office in Tidy Format.}
 \description{
 Analyze and have fun with the text from the best series of all time
+}
+\seealso{
+Useful links:
+\itemize{
+  \item \url{https://github.com/bradlindblad/schrute}
+  \item Report bugs at \url{https://github.com/bradlindblad/schrute/issues}
+}
+
+}
+\author{
+\strong{Maintainer}: Brad Lindblad \email{bradley.lindblad@gmail.com}
+
+Other contributors:
+\itemize{
+  \item Lucas Graybuck [contributor]
+}
+
 }
