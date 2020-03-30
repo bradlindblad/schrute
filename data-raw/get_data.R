@@ -60,5 +60,11 @@ theoffice <- theoffice %>%
   dplyr::left_join(imdb, by = c('season', 'episode')) %>%
   dplyr::select(-title)
 
+
+# change season and ep to integer
+theoffice <- theoffice %>%
+  dplyr::mutate(season = as.integer(season)) %>%
+  dplyr::mutate(episode = as.integer(episode))
+
 usethis::use_data(theoffice, overwrite = TRUE)
 

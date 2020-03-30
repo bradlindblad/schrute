@@ -22,6 +22,7 @@ Useful links:
 Other contributors:
 \itemize{
   \item Lucas Graybuck [contributor]
+  \item Sean Kent \email{spkent@wisc.edu} [contributor]
 }
 
 }

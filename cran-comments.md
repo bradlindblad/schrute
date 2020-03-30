@@ -1,4 +1,4 @@
-* added 3 new fields to dataset
+Fixed issue with the data-raw stuff.
 
 ## Test environments
 * local Linux Mint 19.3, R 3.6.3

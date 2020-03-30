@@ -1,4 +1,8 @@
-schrute 0.1.2
+# schrute 0.2.1
+* Fixed issue with package description
+* Merged in imdb fixes
+
+# schrute 0.2.0
 * Added IMDB ratings, votes and air dates
 
 # schrute 0.1.1
