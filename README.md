@@ -69,3 +69,9 @@ the masters:
   - [David Robinson
     (Youtube)](https://www.youtube.com/watch?v=_IvAubTDQME&t=1092s)
   - [Julia Silge (Youtube)](https://www.youtube.com/watch?v=R32AsuKICAY)
+
+## Other languages
+
+This same dataset is also available in
+[python](https://github.com/bradlindblad/schrutepy) and
+[julia](https://github.com/bradlindblad/Schrute.jl)
