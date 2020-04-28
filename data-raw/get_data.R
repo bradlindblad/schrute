@@ -64,7 +64,8 @@ theoffice <- theoffice %>%
 # change season and ep to integer
 theoffice <- theoffice %>%
   dplyr::mutate(season = as.integer(season)) %>%
-  dplyr::mutate(episode = as.integer(episode))
+  dplyr::mutate(episode = as.integer(episode)) %>%
+  dplyr::as_tibble()
 
 usethis::use_data(theoffice, overwrite = TRUE)
 
