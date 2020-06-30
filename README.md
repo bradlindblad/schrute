@@ -39,8 +39,8 @@ library(schrute)
 library(tibble)
 
 tibble::glimpse(schrute::theoffice)
-#> Observations: 55,130
-#> Variables: 12
+#> Rows: 55,130
+#> Columns: 12
 #> $ index            <int> 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 1…
 #> $ season           <int> 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1…
 #> $ episode          <int> 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1…

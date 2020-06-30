@@ -1,3 +1,6 @@
+# schrute 0.2.2
+* Rebuilt for 4.0.2
+
 # schrute 0.2.1
 * Fixed issue with package description
 * Merged in imdb fixes

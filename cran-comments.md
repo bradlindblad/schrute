@@ -1,7 +1,7 @@
-Fixed issue with the data-raw stuff.
+Rebuilt for 4.0.2
 
 ## Test environments
-* local Linux Mint 19.3, R 3.6.3
+* local Linux Mint 19.3, R 4.0.2
 * ubuntu 14.04 (on travis-ci), R 3.6.1
 * win-builder (devel and release)
 
