@@ -73,6 +73,6 @@ the masters:
 
 ## Other languages
 
-This same dataset is also available in
+This dataset is also available in
 [python](https://github.com/bradlindblad/schrutepy) and
 [julia](https://github.com/bradlindblad/Schrute.jl)
