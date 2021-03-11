@@ -11,7 +11,7 @@
 status](https://travis-ci.org/bradlindblad/schrute.svg?branch=master)](https://travis-ci.org/bradlindblad/schrute)
 [![CRAN\_Status\_Badge](https://www.r-pkg.org/badges/version/schrute)](https://cran.r-project.org/package=schrute)
 [![metacran
-downloads](https://cranlogs.r-pkg.org/badges/schrute)](https://cran.r-project.org/package=schrute)
+downloads](https://cranlogs.r-pkg.org/badges/grand-total/schrute)](https://cran.r-project.org/package=schrute)
 [![lifecycle](https://img.shields.io/badge/lifecycle-stable-brightgreen.svg)](https://www.tidyverse.org/lifecycle/#stable)
 <!-- badges: end -->
 
