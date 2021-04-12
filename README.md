@@ -13,7 +13,7 @@ status](https://github.com/bradlindblad/schrute/workflows/R-CMD-check/badge.svg)
 [![metacran
 downloads](https://cranlogs.r-pkg.org/badges/grand-total/schrute)](https://cran.r-project.org/package=schrute)
 [![lifecycle](https://img.shields.io/badge/lifecycle-stable-brightgreen.svg)](https://www.tidyverse.org/lifecycle/#stable)
-
+[![pkgdown](https://github.com/bradlindblad/schrute/actions/workflows/pkgdown.yaml/badge.svg)](https://github.com/bradlindblad/schrute/actions/workflows/pkgdown.yaml)
 <!-- badges: end -->
 
 Analyze and have fun with the text from the best series of all time
