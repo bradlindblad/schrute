@@ -62,7 +62,7 @@ Or view the short vignette with:
 
 ## Watch and learn
 
-Julia Silge and David Robinson, creators of the [tidyText
+- Julia Silge and David Robinson, creators of the [tidyText
 package](https://www.tidytextmining.com/) both used the {schrute}
 package for a \#tidyTuesday analysis. Watch their videos and learn from
 the masters:
@@ -70,6 +70,8 @@ the masters:
   - [David Robinson
     (Youtube)](https://www.youtube.com/watch?v=_IvAubTDQME&t=1092s)
   - [Julia Silge (Youtube)](https://www.youtube.com/watch?v=R32AsuKICAY)
+
+- R-Graph-Gallery features {schrute} in a time-series lollipop chart found [here](https://www.r-graph-gallery.com/web-lollipop-plot-with-R-the-office.html)
 
 ## Other languages
 
