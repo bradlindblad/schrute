@@ -1,7 +1,10 @@
 pandoc: 2.7.3
-pkgdown: 1.6.1
+pkgdown: 2.0.2
 pkgdown_sha: ~
 articles:
   theoffice: theoffice.html
-last_built: 2021-08-15T21:41Z
+last_built: 2022-01-31T02:55Z
+urls:
+  reference: https://bradlindblad.github.io/schrute/reference
+  article: https://bradlindblad.github.io/schrute/articles
 
