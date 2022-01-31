@@ -13,8 +13,8 @@ knitr::opts_chunk$set(
 )
 ```
 
-# schrute
-<img src='https://raw.githubusercontent.com/bradlindblad/schrute/master/man/figures/logo.png' align="right" height="200" />
+
+# schrute <img src="https://github.com/bradlindblad/schrute/blob/master/man/figures/logo.png?raw=true" align="right" alt="" width="120" />
 
 <!-- badges: start -->
 [![R build status](https://github.com/bradlindblad/schrute/workflows/R-CMD-check/badge.svg)](https://github.com/bradlindblad/schrute/actions)

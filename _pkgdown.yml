@@ -1,1 +1,8 @@
-destination: docs
+# destination: docs
+url: https://bradlindblad.github.io/schrute/
+template:
+  bootstrap: 5
+  bootswatch: lux
+  theme: nord
+  bslib:
+    pkgdown-nav-height: 100px
