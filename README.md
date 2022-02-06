@@ -7,10 +7,11 @@
 
 [![R build
 status](https://github.com/bradlindblad/schrute/workflows/R-CMD-check/badge.svg)](https://github.com/bradlindblad/schrute/actions)
-[![CRAN\_Status\_Badge](https://www.r-pkg.org/badges/version/schrute)](https://cran.r-project.org/package=schrute)
+[![pkgdown](https://github.com/bradlindblad/schrute/actions/workflows/pkgdown.yaml/badge.svg)](https://github.com/bradlindblad/schrute/actions/workflows/pkgdown.yaml)
 [![metacran
 downloads](https://cranlogs.r-pkg.org/badges/grand-total/schrute)](https://cran.r-project.org/package=schrute)
 [![lifecycle](https://img.shields.io/badge/lifecycle-stable-brightgreen.svg)](https://www.tidyverse.org/lifecycle/#stable)
+[![CRAN\_Status\_Badge](https://www.r-pkg.org/badges/version/schrute)](https://cran.r-project.org/package=schrute)
 
 <!-- badges: end -->
 
