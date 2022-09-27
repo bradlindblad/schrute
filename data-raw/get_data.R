@@ -4,17 +4,24 @@
 
 raw <- read.csv("python/office_transcript.csv", header = F)
 
-mylist <- list(raw)
-stacked <- unlist(mylist, use.names = F)
+mydata <- raw |>
+  tidyr::pivot_longer(cols = tidyselect::everything()) |>
+  dplyr::filter(value != "") |>
+  dplyr::select(-name)
 
-final <- tibble::tibble(index = seq_along(stacked), text = stacked)
+mydata$index <- seq(1:nrow(mydata))
+
+final <- mydata |>
+  dplyr::select(index, text = value) |>
+  tibble::as_tibble()
+
 
 directors_writers <- read.csv("data-raw/office_directors_writers.csv",
                               colClasses = "character") %>%
-  dplyr::select(-staff_writer)
+  select(-staff_writer)
 
 theoffice <- final %>%
-  tidyr::separate(text, c("ep", "txt"), sep = ";") %>%
+  tidyr::separate(text, c("ep", "txt"), sep = ";", extra = "merge") %>%
   tidyr::drop_na() %>%
   # dplyr::mutate(character = stringi::stri_extract_first_words(txt)) %>%
   dplyr::mutate(character = stringr::word(txt, 1, sep = "\\:")) %>%
@@ -47,25 +54,6 @@ theoffice <- final %>%
          director,writer,
          character,text,text_w_direction)
 
-imdb_episode_crosswalk <- read.csv("data-raw/imdb-theoffice-episode-crosswalk.csv", colClasses = c("numeric", "character", "numeric"))
-
-imdb <- read.csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2020/2020-03-17/office_ratings.csv') %>%
-  dplyr::left_join(imdb_episode_crosswalk,
-            by = c("episode" = "episode_imdb", "season")) %>%
-  dplyr::mutate(season = ifelse(nchar(season) < 2, paste0("0", season), season)) %>%
-  dplyr::mutate(episode = episode_schrute) %>%
-  dplyr::select(-episode_schrute)
-
-theoffice <- theoffice %>%
-  dplyr::left_join(imdb, by = c('season', 'episode')) %>%
-  dplyr::select(-title)
-
-
-# change season and ep to integer
-theoffice <- theoffice %>%
-  dplyr::mutate(season = as.integer(season)) %>%
-  dplyr::mutate(episode = as.integer(episode)) %>%
-  dplyr::as_tibble()
 
 usethis::use_data(theoffice, overwrite = TRUE)
 
