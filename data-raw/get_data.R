@@ -18,7 +18,7 @@ final <- mydata |>
 
 directors_writers <- read.csv("data-raw/office_directors_writers.csv",
                               colClasses = "character") %>%
-  select(-staff_writer)
+  dplyr::select(-staff_writer)
 
 theoffice <- final %>%
   tidyr::separate(text, c("ep", "txt"), sep = ";", extra = "merge") %>%
