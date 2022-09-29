@@ -50,9 +50,29 @@ theoffice <- final %>%
   dplyr::mutate(episode_name = ifelse(season == "02" & episode == "09",
                                       "E-Mail Surveilance",
                                       episode_name)) %>%
-  select(index,season,episode, episode_name,
+  dplyr::select(index,season,episode, episode_name,
          director,writer,
          character,text,text_w_direction)
+
+imdb_episode_crosswalk <- read.csv("data-raw/imdb-theoffice-episode-crosswalk.csv", colClasses = c("numeric", "character", "numeric"))
+
+imdb <- read.csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2020/2020-03-17/office_ratings.csv') %>%
+  dplyr::left_join(imdb_episode_crosswalk,
+                   by = c("episode" = "episode_imdb", "season")) %>%
+  dplyr::mutate(season = ifelse(nchar(season) < 2, paste0("0", season), season)) %>%
+  dplyr::mutate(episode = episode_schrute) %>%
+  dplyr::select(-episode_schrute)
+
+theoffice <- theoffice %>%
+  dplyr::left_join(imdb, by = c('season', 'episode')) %>%
+  dplyr::select(-title)
+
+
+# change season and ep to integer
+theoffice <- theoffice %>%
+  dplyr::mutate(season = as.integer(season)) %>%
+  dplyr::mutate(episode = as.integer(episode)) %>%
+  dplyr::as_tibble()
 
 
 usethis::use_data(theoffice, overwrite = TRUE)

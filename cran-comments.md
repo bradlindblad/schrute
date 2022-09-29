@@ -1,4 +1,4 @@
-Rebuilt for 1.0
+Fixed small issue with data.
 
 ## Test environments
 * local Linux Mint 21, R 4.1.2
