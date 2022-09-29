@@ -1,5 +1,5 @@
 # schrute 1.0.0
-* All lines are now in order
+* All of the lines in the series are now actually in order
 
 # schrute 0.2.2
 * Rebuilt for 4.0.2

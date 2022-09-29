@@ -1,8 +1,7 @@
-Rebuilt for 4.0.2
+Rebuilt for 1.0
 
 ## Test environments
-* local Linux Mint 19.3, R 4.0.2
-* ubuntu 14.04 (on travis-ci), R 3.6.1
+* local Linux Mint 21, R 4.1.2
 * win-builder (devel and release)
 
 ## R CMD check results
