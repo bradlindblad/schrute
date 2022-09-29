@@ -14,8 +14,8 @@
 <link rel="apple-touch-icon" type="image/png" sizes="76x76" href="../apple-touch-icon-76x76.png">
 <link rel="apple-touch-icon" type="image/png" sizes="60x60" href="../apple-touch-icon-60x60.png">
 <script src="../deps/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<link href="../deps/bootstrap-5.1.0/bootstrap.min.css" rel="stylesheet">
-<script src="../deps/bootstrap-5.1.0/bootstrap.bundle.min.js"></script><!-- Font Awesome icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous">
+<link href="../deps/bootstrap-5.1.3/bootstrap.min.css" rel="stylesheet">
+<script src="../deps/bootstrap-5.1.3/bootstrap.bundle.min.js"></script><!-- Font Awesome icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous">
 <!-- bootstrap-toc --><script src="https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.1/dist/bootstrap-toc.min.js"></script><!-- headroom.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script><!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><!-- search --><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- pkgdown --><script src="../pkgdown.js"></script><meta property="og:title" content="Using schrute">
 <meta property="og:description" content="schrute">
@@ -33,7 +33,7 @@
     
     <a class="navbar-brand me-2" href="../index.html">schrute</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.2.2</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">1.0.0</small>
 
     
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -76,7 +76,7 @@
 
 
 <script src="theoffice_files/accessible-code-block-0.0.1/empty-anchor.js"></script><div class="row">
-  <main id="main"><div class="page-header">
+  <main id="main" class="col-md-9"><div class="page-header">
       <img src="../logo.png" class="logo" alt=""><h1>Using schrute</h1>
             
       
@@ -93,227 +93,126 @@
 <p>Use this data set to master NLP or text analysis. Let’s scratch the surface of the subject with a few examples from the excellent <a href="https://www.tidytextmining.com/" class="external-link">Text Mining with R</a> book, by Julia Silge and David Robinson.</p>
 <p>First install the package from CRAN:</p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/bradlindblad/schrute" class="external-link">schrute</a></span><span class="op">)</span></code></pre></div>
+<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/bradlindblad/schrute" class="external-link">schrute</a></span><span class="op">)</span></span></code></pre></div>
 <p>There is only one data set with the schrute package; assign it to a variable</p>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="va">mydata</span> <span class="op">&lt;-</span> <span class="fu">schrute</span><span class="fu">::</span><span class="va"><a href="../reference/theoffice.html">theoffice</a></span></code></pre></div>
+<code class="sourceCode R"><span><span class="va">mydata</span> <span class="op">&lt;-</span> <span class="fu">schrute</span><span class="fu">::</span><span class="va"><a href="../reference/theoffice.html">theoffice</a></span></span></code></pre></div>
 <p>Take a peek at the format:</p>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://pillar.r-lib.org/reference/glimpse.html" class="external-link">glimpse</a></span><span class="op">(</span><span class="va">mydata</span><span class="op">)</span>
-<span class="co">#&gt; Rows: 55,130</span>
-<span class="co">#&gt; Columns: 12</span>
-<span class="co">#&gt; $ index            <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16…</span>
-<span class="co">#&gt; $ season           <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,…</span>
-<span class="co">#&gt; $ episode          <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,…</span>
-<span class="co">#&gt; $ episode_name     <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "Pilot", "Pilot", "Pilot", "Pilot", "Pilot", "Pilot",…</span>
-<span class="co">#&gt; $ director         <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "Ken Kwapis", "Ken Kwapis", "Ken Kwapis", "Ken Kwapis…</span>
-<span class="co">#&gt; $ writer           <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "Ricky Gervais;Stephen Merchant;Greg Daniels", "Ricky…</span>
-<span class="co">#&gt; $ character        <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "Michael", "Jim", "Michael", "Jim", "Michael", "Micha…</span>
-<span class="co">#&gt; $ text             <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "All right Jim. Your quarterlies look very good. How …</span>
-<span class="co">#&gt; $ text_w_direction <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "All right Jim. Your quarterlies look very good. How …</span>
-<span class="co">#&gt; $ imdb_rating      <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span> 7.6, 7.6, 7.6, 7.6, 7.6, 7.6, 7.6, 7.6, 7.6, 7.6, 7.6…</span>
-<span class="co">#&gt; $ total_votes      <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> 3706, 3706, 3706, 3706, 3706, 3706, 3706, 3706, 3706,…</span>
-<span class="co">#&gt; $ air_date         <span style="color: #949494; font-style: italic;">&lt;fct&gt;</span> 2005-03-24, 2005-03-24, 2005-03-24, 2005-03-24, 2005-…</span></code></pre></div>
+<code class="sourceCode R"><span><span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://pillar.r-lib.org/reference/glimpse.html" class="external-link">glimpse</a></span><span class="op">(</span><span class="va">mydata</span><span class="op">)</span></span>
+<span><span class="co">#&gt; Rows: 55,130</span></span>
+<span><span class="co">#&gt; Columns: 9</span></span>
+<span><span class="co">#&gt; $ index            <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16…</span></span>
+<span><span class="co">#&gt; $ season           <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "01", "01", "01", "01", "01", "01", "01", "01", "01",…</span></span>
+<span><span class="co">#&gt; $ episode          <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "01", "01", "01", "01", "01", "01", "01", "01", "01",…</span></span>
+<span><span class="co">#&gt; $ episode_name     <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "Pilot", "Pilot", "Pilot", "Pilot", "Pilot", "Pilot",…</span></span>
+<span><span class="co">#&gt; $ director         <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "Ken Kwapis", "Ken Kwapis", "Ken Kwapis", "Ken Kwapis…</span></span>
+<span><span class="co">#&gt; $ writer           <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "Ricky Gervais;Stephen Merchant;Greg Daniels", "Ricky…</span></span>
+<span><span class="co">#&gt; $ character        <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "Michael", "Jim", "Michael", "Jim", "Michael", "Micha…</span></span>
+<span><span class="co">#&gt; $ text             <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "All right Jim. Your quarterlies look very good. How …</span></span>
+<span><span class="co">#&gt; $ text_w_direction <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "All right Jim. Your quarterlies look very good. How …</span></span></code></pre></div>
 <div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
-<code class="sourceCode R"> <span class="va">mydata</span> <span class="op"><a href="../reference/pipe.html">%&gt;%</a></span>
-  <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html" class="external-link">filter</a></span><span class="op">(</span><span class="va">season</span> <span class="op">==</span> <span class="fl">1</span><span class="op">)</span> <span class="op"><a href="../reference/pipe.html">%&gt;%</a></span>
-  <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html" class="external-link">filter</a></span><span class="op">(</span><span class="va">episode</span> <span class="op">==</span> <span class="fl">1</span><span class="op">)</span> <span class="op"><a href="../reference/pipe.html">%&gt;%</a></span>
-  <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/slice.html" class="external-link">slice</a></span><span class="op">(</span><span class="fl">1</span><span class="op">:</span><span class="fl">3</span><span class="op">)</span> <span class="op"><a href="../reference/pipe.html">%&gt;%</a></span>
-  <span class="fu">knitr</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/knitr/man/kable.html" class="external-link">kable</a></span><span class="op">(</span><span class="op">)</span></code></pre></div>
-<table style="width:100%;" class="table">
+<code class="sourceCode R"><span> <span class="va">mydata</span> <span class="op"><a href="../reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html" class="external-link">filter</a></span><span class="op">(</span><span class="va">season</span> <span class="op">==</span> <span class="fl">1</span><span class="op">)</span> <span class="op"><a href="../reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html" class="external-link">filter</a></span><span class="op">(</span><span class="va">episode</span> <span class="op">==</span> <span class="fl">1</span><span class="op">)</span> <span class="op"><a href="../reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/slice.html" class="external-link">slice</a></span><span class="op">(</span><span class="fl">1</span><span class="op">:</span><span class="fl">3</span><span class="op">)</span> <span class="op"><a href="../reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu">knitr</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/knitr/man/kable.html" class="external-link">kable</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
+<table class="table">
 <colgroup>
-<col width="1%">
-<col width="2%">
-<col width="2%">
-<col width="4%">
-<col width="3%">
-<col width="14%">
-<col width="3%">
-<col width="27%">
-<col width="27%">
-<col width="3%">
-<col width="3%">
-<col width="3%">
+<col width="7%">
+<col width="8%">
+<col width="9%">
+<col width="15%">
+<col width="10%">
+<col width="8%">
+<col width="12%">
+<col width="6%">
+<col width="20%">
 </colgroup>
 <thead><tr class="header">
 <th align="right">index</th>
-<th align="right">season</th>
-<th align="right">episode</th>
+<th align="left">season</th>
+<th align="left">episode</th>
 <th align="left">episode_name</th>
 <th align="left">director</th>
 <th align="left">writer</th>
 <th align="left">character</th>
 <th align="left">text</th>
 <th align="left">text_w_direction</th>
-<th align="right">imdb_rating</th>
-<th align="right">total_votes</th>
-<th align="left">air_date</th>
 </tr></thead>
-<tbody>
-<tr class="odd">
-<td align="right">1</td>
-<td align="right">1</td>
-<td align="right">1</td>
-<td align="left">Pilot</td>
-<td align="left">Ken Kwapis</td>
-<td align="left">Ricky Gervais;Stephen Merchant;Greg Daniels</td>
-<td align="left">Michael</td>
-<td align="left">All right Jim. Your quarterlies look very good. How are things at the library?</td>
-<td align="left">All right Jim. Your quarterlies look very good. How are things at the library?</td>
-<td align="right">7.6</td>
-<td align="right">3706</td>
-<td align="left">2005-03-24</td>
-</tr>
-<tr class="even">
-<td align="right">2</td>
-<td align="right">1</td>
-<td align="right">1</td>
-<td align="left">Pilot</td>
-<td align="left">Ken Kwapis</td>
-<td align="left">Ricky Gervais;Stephen Merchant;Greg Daniels</td>
-<td align="left">Jim</td>
-<td align="left">Oh, I told you. I couldn’t close it. So…</td>
-<td align="left">Oh, I told you. I couldn’t close it. So…</td>
-<td align="right">7.6</td>
-<td align="right">3706</td>
-<td align="left">2005-03-24</td>
-</tr>
-<tr class="odd">
-<td align="right">3</td>
-<td align="right">1</td>
-<td align="right">1</td>
-<td align="left">Pilot</td>
-<td align="left">Ken Kwapis</td>
-<td align="left">Ricky Gervais;Stephen Merchant;Greg Daniels</td>
-<td align="left">Michael</td>
-<td align="left">So you’ve come to the master for guidance? Is this what you’re saying, grasshopper?</td>
-<td align="left">So you’ve come to the master for guidance? Is this what you’re saying, grasshopper?</td>
-<td align="right">7.6</td>
-<td align="right">3706</td>
-<td align="left">2005-03-24</td>
-</tr>
-</tbody>
+<tbody></tbody>
 </table>
 <p>So what we have is the season, episode number and name, character, the line spoken and the line spoken with the stage direction (cue).</p>
 <p>We can tokenize all of the lines with a few lines from the tidytext package:</p>
 <div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="va">token.mydata</span> <span class="op">&lt;-</span> <span class="va">mydata</span> <span class="op"><a href="../reference/pipe.html">%&gt;%</a></span>
-  <span class="fu">tidytext</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/tidytext/man/unnest_tokens.html" class="external-link">unnest_tokens</a></span><span class="op">(</span><span class="va">word</span>, <span class="va">text</span><span class="op">)</span></code></pre></div>
-<p>This increases our data set to 570450 records, where each record contains a word from the script.</p>
+<code class="sourceCode R"><span><span class="va">token.mydata</span> <span class="op">&lt;-</span> <span class="va">mydata</span> <span class="op"><a href="../reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu">tidytext</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/tidytext/man/unnest_tokens.html" class="external-link">unnest_tokens</a></span><span class="op">(</span><span class="va">word</span>, <span class="va">text</span><span class="op">)</span></span></code></pre></div>
+<p>This increases our data set to 571612 records, where each record contains a word from the script.</p>
 <div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
-<code class="sourceCode R"> <span class="va">token.mydata</span> <span class="op"><a href="../reference/pipe.html">%&gt;%</a></span>
-  <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html" class="external-link">filter</a></span><span class="op">(</span><span class="va">season</span> <span class="op">==</span> <span class="fl">1</span><span class="op">)</span> <span class="op"><a href="../reference/pipe.html">%&gt;%</a></span>
-  <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html" class="external-link">filter</a></span><span class="op">(</span><span class="va">episode</span> <span class="op">==</span> <span class="fl">1</span><span class="op">)</span> <span class="op"><a href="../reference/pipe.html">%&gt;%</a></span>
-  <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/slice.html" class="external-link">slice</a></span><span class="op">(</span><span class="fl">1</span><span class="op">:</span><span class="fl">3</span><span class="op">)</span> <span class="op"><a href="../reference/pipe.html">%&gt;%</a></span>
-  <span class="fu">knitr</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/knitr/man/kable.html" class="external-link">kable</a></span><span class="op">(</span><span class="op">)</span></code></pre></div>
-<table style="width:100%;" class="table">
+<code class="sourceCode R"><span> <span class="va">token.mydata</span> <span class="op"><a href="../reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html" class="external-link">filter</a></span><span class="op">(</span><span class="va">season</span> <span class="op">==</span> <span class="fl">1</span><span class="op">)</span> <span class="op"><a href="../reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html" class="external-link">filter</a></span><span class="op">(</span><span class="va">episode</span> <span class="op">==</span> <span class="fl">1</span><span class="op">)</span> <span class="op"><a href="../reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/slice.html" class="external-link">slice</a></span><span class="op">(</span><span class="fl">1</span><span class="op">:</span><span class="fl">3</span><span class="op">)</span> <span class="op"><a href="../reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu">knitr</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/knitr/man/kable.html" class="external-link">kable</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
+<table class="table">
 <colgroup>
-<col width="2%">
-<col width="3%">
-<col width="3%">
-<col width="5%">
-<col width="5%">
+<col width="7%">
+<col width="8%">
+<col width="9%">
+<col width="15%">
+<col width="10%">
+<col width="8%">
+<col width="12%">
 <col width="20%">
-<col width="4%">
-<col width="36%">
-<col width="5%">
-<col width="5%">
-<col width="5%">
-<col width="2%">
+<col width="6%">
 </colgroup>
 <thead><tr class="header">
 <th align="right">index</th>
-<th align="right">season</th>
-<th align="right">episode</th>
+<th align="left">season</th>
+<th align="left">episode</th>
 <th align="left">episode_name</th>
 <th align="left">director</th>
 <th align="left">writer</th>
 <th align="left">character</th>
 <th align="left">text_w_direction</th>
-<th align="right">imdb_rating</th>
-<th align="right">total_votes</th>
-<th align="left">air_date</th>
 <th align="left">word</th>
 </tr></thead>
-<tbody>
-<tr class="odd">
-<td align="right">1</td>
-<td align="right">1</td>
-<td align="right">1</td>
-<td align="left">Pilot</td>
-<td align="left">Ken Kwapis</td>
-<td align="left">Ricky Gervais;Stephen Merchant;Greg Daniels</td>
-<td align="left">Michael</td>
-<td align="left">All right Jim. Your quarterlies look very good. How are things at the library?</td>
-<td align="right">7.6</td>
-<td align="right">3706</td>
-<td align="left">2005-03-24</td>
-<td align="left">all</td>
-</tr>
-<tr class="even">
-<td align="right">1</td>
-<td align="right">1</td>
-<td align="right">1</td>
-<td align="left">Pilot</td>
-<td align="left">Ken Kwapis</td>
-<td align="left">Ricky Gervais;Stephen Merchant;Greg Daniels</td>
-<td align="left">Michael</td>
-<td align="left">All right Jim. Your quarterlies look very good. How are things at the library?</td>
-<td align="right">7.6</td>
-<td align="right">3706</td>
-<td align="left">2005-03-24</td>
-<td align="left">right</td>
-</tr>
-<tr class="odd">
-<td align="right">1</td>
-<td align="right">1</td>
-<td align="right">1</td>
-<td align="left">Pilot</td>
-<td align="left">Ken Kwapis</td>
-<td align="left">Ricky Gervais;Stephen Merchant;Greg Daniels</td>
-<td align="left">Michael</td>
-<td align="left">All right Jim. Your quarterlies look very good. How are things at the library?</td>
-<td align="right">7.6</td>
-<td align="right">3706</td>
-<td align="left">2005-03-24</td>
-<td align="left">jim</td>
-</tr>
-</tbody>
+<tbody></tbody>
 </table>
 <p>If we want to analyze the entire data set, we need to remove some stop words first:</p>
 <div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="va">stop_words</span> <span class="op">&lt;-</span> <span class="fu">tidytext</span><span class="fu">::</span><span class="va"><a href="https://rdrr.io/pkg/tidytext/man/stop_words.html" class="external-link">stop_words</a></span>
-
-<span class="va">tidy.token.mydata</span> <span class="op">&lt;-</span> <span class="va">token.mydata</span> <span class="op"><a href="../reference/pipe.html">%&gt;%</a></span>
-  <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter-joins.html" class="external-link">anti_join</a></span><span class="op">(</span><span class="va">stop_words</span>, by <span class="op">=</span> <span class="st">"word"</span><span class="op">)</span></code></pre></div>
+<code class="sourceCode R"><span><span class="va">stop_words</span> <span class="op">&lt;-</span> <span class="fu">tidytext</span><span class="fu">::</span><span class="va"><a href="https://rdrr.io/pkg/tidytext/man/stop_words.html" class="external-link">stop_words</a></span></span>
+<span></span>
+<span><span class="va">tidy.token.mydata</span> <span class="op">&lt;-</span> <span class="va">token.mydata</span> <span class="op"><a href="../reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter-joins.html" class="external-link">anti_join</a></span><span class="op">(</span><span class="va">stop_words</span>, by <span class="op">=</span> <span class="st">"word"</span><span class="op">)</span></span></code></pre></div>
 <p>And then see what the most common words are:</p>
 <div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="va">tidy.token.mydata</span> <span class="op"><a href="../reference/pipe.html">%&gt;%</a></span>
-  <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/count.html" class="external-link">count</a></span><span class="op">(</span><span class="va">word</span>, sort <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span> 
-<span class="co">#&gt; <span style="color: #949494;"># A tibble: 18,946 × 2</span></span>
-<span class="co">#&gt;    word        n</span>
-<span class="co">#&gt;    <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>   <span style="color: #949494; font-style: italic;">&lt;int&gt;</span></span>
-<span class="co">#&gt; <span style="color: #BCBCBC;"> 1</span> yeah     <span style="text-decoration: underline;">2</span>930</span>
-<span class="co">#&gt; <span style="color: #BCBCBC;"> 2</span> hey      <span style="text-decoration: underline;">2</span>232</span>
-<span class="co">#&gt; <span style="color: #BCBCBC;"> 3</span> michael  <span style="text-decoration: underline;">1</span>859</span>
-<span class="co">#&gt; <span style="color: #BCBCBC;"> 4</span> uh       <span style="text-decoration: underline;">1</span>459</span>
-<span class="co">#&gt; <span style="color: #BCBCBC;"> 5</span> gonna    <span style="text-decoration: underline;">1</span>399</span>
-<span class="co">#&gt; <span style="color: #BCBCBC;"> 6</span> dwight   <span style="text-decoration: underline;">1</span>340</span>
-<span class="co">#&gt; <span style="color: #BCBCBC;"> 7</span> jim      <span style="text-decoration: underline;">1</span>168</span>
-<span class="co">#&gt; <span style="color: #BCBCBC;"> 8</span> time     <span style="text-decoration: underline;">1</span>147</span>
-<span class="co">#&gt; <span style="color: #BCBCBC;"> 9</span> pam      <span style="text-decoration: underline;">1</span>044</span>
-<span class="co">#&gt; <span style="color: #BCBCBC;">10</span> guys      945</span>
-<span class="co">#&gt; <span style="color: #949494;"># … with 18,936 more rows</span></span></code></pre></div>
+<code class="sourceCode R"><span><span class="va">tidy.token.mydata</span> <span class="op"><a href="../reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/count.html" class="external-link">count</a></span><span class="op">(</span><span class="va">word</span>, sort <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span> </span>
+<span><span class="co">#&gt; <span style="color: #949494;"># A tibble: 18,960 × 2</span></span></span>
+<span><span class="co">#&gt;    word        n</span></span>
+<span><span class="co">#&gt;    <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>   <span style="color: #949494; font-style: italic;">&lt;int&gt;</span></span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 1</span> yeah     <span style="text-decoration: underline;">2</span>930</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 2</span> hey      <span style="text-decoration: underline;">2</span>232</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 3</span> michael  <span style="text-decoration: underline;">1</span>860</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 4</span> uh       <span style="text-decoration: underline;">1</span>463</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 5</span> gonna    <span style="text-decoration: underline;">1</span>405</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 6</span> dwight   <span style="text-decoration: underline;">1</span>345</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 7</span> jim      <span style="text-decoration: underline;">1</span>162</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 8</span> time     <span style="text-decoration: underline;">1</span>149</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 9</span> pam      <span style="text-decoration: underline;">1</span>043</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">10</span> guys      947</span></span>
+<span><span class="co">#&gt; <span style="color: #949494;"># … with 18,950 more rows</span></span></span></code></pre></div>
 <div class="sourceCode" id="cb9"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="va">tidy.token.mydata</span> <span class="op"><a href="../reference/pipe.html">%&gt;%</a></span>
-  <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/count.html" class="external-link">count</a></span><span class="op">(</span><span class="va">word</span>, sort <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span> <span class="op"><a href="../reference/pipe.html">%&gt;%</a></span>
-  <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html" class="external-link">filter</a></span><span class="op">(</span><span class="va">n</span> <span class="op">&gt;</span> <span class="fl">400</span><span class="op">)</span> <span class="op"><a href="../reference/pipe.html">%&gt;%</a></span>
-  <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html" class="external-link">mutate</a></span><span class="op">(</span>word <span class="op">=</span> <span class="fu">stats</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/r/stats/reorder.factor.html" class="external-link">reorder</a></span><span class="op">(</span><span class="va">word</span>, <span class="va">n</span><span class="op">)</span><span class="op">)</span> <span class="op"><a href="../reference/pipe.html">%&gt;%</a></span>
-  <span class="fu">ggplot2</span><span class="fu">::</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html" class="external-link">ggplot</a></span><span class="op">(</span><span class="fu">ggplot2</span><span class="fu">::</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html" class="external-link">aes</a></span><span class="op">(</span><span class="va">word</span>, <span class="va">n</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span>
-  <span class="fu">ggplot2</span><span class="fu">::</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_bar.html" class="external-link">geom_col</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span>
-  <span class="fu">ggplot2</span><span class="fu">::</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html" class="external-link">xlab</a></span><span class="op">(</span><span class="cn">NULL</span><span class="op">)</span> <span class="op">+</span>
-  <span class="fu">ggplot2</span><span class="fu">::</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/coord_flip.html" class="external-link">coord_flip</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span>
-  <span class="fu">ggplot2</span><span class="fu">::</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html" class="external-link">theme_minimal</a></span><span class="op">(</span><span class="op">)</span></code></pre></div>
+<code class="sourceCode R"><span><span class="va">tidy.token.mydata</span> <span class="op"><a href="../reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/count.html" class="external-link">count</a></span><span class="op">(</span><span class="va">word</span>, sort <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span> <span class="op"><a href="../reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html" class="external-link">filter</a></span><span class="op">(</span><span class="va">n</span> <span class="op">&gt;</span> <span class="fl">400</span><span class="op">)</span> <span class="op"><a href="../reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html" class="external-link">mutate</a></span><span class="op">(</span>word <span class="op">=</span> <span class="fu">stats</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/r/stats/reorder.factor.html" class="external-link">reorder</a></span><span class="op">(</span><span class="va">word</span>, <span class="va">n</span><span class="op">)</span><span class="op">)</span> <span class="op"><a href="../reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu">ggplot2</span><span class="fu">::</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html" class="external-link">ggplot</a></span><span class="op">(</span><span class="fu">ggplot2</span><span class="fu">::</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html" class="external-link">aes</a></span><span class="op">(</span><span class="va">word</span>, <span class="va">n</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu">ggplot2</span><span class="fu">::</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_bar.html" class="external-link">geom_col</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu">ggplot2</span><span class="fu">::</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html" class="external-link">xlab</a></span><span class="op">(</span><span class="cn">NULL</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu">ggplot2</span><span class="fu">::</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/coord_flip.html" class="external-link">coord_flip</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu">ggplot2</span><span class="fu">::</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html" class="external-link">theme_minimal</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
 <p><img src="theoffice_files/figure-html/unnamed-chunk-9-1.png" width="700"></p>
 <p>Feel free to keep going with this. Now that you have the time line (episode, season) and the character for each line and word in the series, you can perform an unlimited number of analyses. Some ideas: - Sentiment by character - Sentiment by character by season - Narcissism by season (ahem.. Nard Dog season 8-9) - Lines by character - Etc.</p>
 </div>
@@ -329,7 +228,7 @@
 
 <div class="pkgdown-footer-right">
   <p></p>
-<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.2.</p>
+<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.6.</p>
 </div>
 
     </footer>
