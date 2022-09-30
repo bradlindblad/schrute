@@ -1,6 +1,6 @@
 Package: schrute
 Title: The Entire Transcript from the Office in Tidy Format
-Version: 1.0.0
+Version: 1.0.1
 Authors@R: c(
     person("Brad", "Lindblad", , "me@bradlindblad.com", role = c("aut", "cre")),
     person("Lucas", "Graybuck", role = "ctb"),
