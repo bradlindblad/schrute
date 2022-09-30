@@ -3,7 +3,7 @@ pkgdown: 2.0.6
 pkgdown_sha: ~
 articles:
   theoffice: theoffice.html
-last_built: 2022-09-30T19:33Z
+last_built: 2022-09-30T19:36Z
 urls:
   reference: https://bradlindblad.github.io/schrute/reference
   article: https://bradlindblad.github.io/schrute/articles
