@@ -33,7 +33,7 @@
     
     <a class="navbar-brand me-2" href="../index.html">schrute</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">1.0.0</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">1.0.1</small>
 
     
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -101,46 +101,98 @@
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://pillar.r-lib.org/reference/glimpse.html" class="external-link">glimpse</a></span><span class="op">(</span><span class="va">mydata</span><span class="op">)</span></span>
 <span><span class="co">#&gt; Rows: 55,130</span></span>
-<span><span class="co">#&gt; Columns: 9</span></span>
+<span><span class="co">#&gt; Columns: 12</span></span>
 <span><span class="co">#&gt; $ index            <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16…</span></span>
-<span><span class="co">#&gt; $ season           <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "01", "01", "01", "01", "01", "01", "01", "01", "01",…</span></span>
-<span><span class="co">#&gt; $ episode          <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "01", "01", "01", "01", "01", "01", "01", "01", "01",…</span></span>
+<span><span class="co">#&gt; $ season           <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,…</span></span>
+<span><span class="co">#&gt; $ episode          <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,…</span></span>
 <span><span class="co">#&gt; $ episode_name     <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "Pilot", "Pilot", "Pilot", "Pilot", "Pilot", "Pilot",…</span></span>
 <span><span class="co">#&gt; $ director         <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "Ken Kwapis", "Ken Kwapis", "Ken Kwapis", "Ken Kwapis…</span></span>
 <span><span class="co">#&gt; $ writer           <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "Ricky Gervais;Stephen Merchant;Greg Daniels", "Ricky…</span></span>
 <span><span class="co">#&gt; $ character        <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "Michael", "Jim", "Michael", "Jim", "Michael", "Micha…</span></span>
 <span><span class="co">#&gt; $ text             <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "All right Jim. Your quarterlies look very good. How …</span></span>
-<span><span class="co">#&gt; $ text_w_direction <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "All right Jim. Your quarterlies look very good. How …</span></span></code></pre></div>
+<span><span class="co">#&gt; $ text_w_direction <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "All right Jim. Your quarterlies look very good. How …</span></span>
+<span><span class="co">#&gt; $ imdb_rating      <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span> 7.6, 7.6, 7.6, 7.6, 7.6, 7.6, 7.6, 7.6, 7.6, 7.6, 7.6…</span></span>
+<span><span class="co">#&gt; $ total_votes      <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> 3706, 3706, 3706, 3706, 3706, 3706, 3706, 3706, 3706,…</span></span>
+<span><span class="co">#&gt; $ air_date         <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "2005-03-24", "2005-03-24", "2005-03-24", "2005-03-24…</span></span></code></pre></div>
 <div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span> <span class="va">mydata</span> <span class="op"><a href="../reference/pipe.html">%&gt;%</a></span></span>
 <span>  <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html" class="external-link">filter</a></span><span class="op">(</span><span class="va">season</span> <span class="op">==</span> <span class="fl">1</span><span class="op">)</span> <span class="op"><a href="../reference/pipe.html">%&gt;%</a></span></span>
 <span>  <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html" class="external-link">filter</a></span><span class="op">(</span><span class="va">episode</span> <span class="op">==</span> <span class="fl">1</span><span class="op">)</span> <span class="op"><a href="../reference/pipe.html">%&gt;%</a></span></span>
 <span>  <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/slice.html" class="external-link">slice</a></span><span class="op">(</span><span class="fl">1</span><span class="op">:</span><span class="fl">3</span><span class="op">)</span> <span class="op"><a href="../reference/pipe.html">%&gt;%</a></span></span>
 <span>  <span class="fu">knitr</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/knitr/man/kable.html" class="external-link">kable</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
-<table class="table">
+<table style="width:100%;" class="table">
 <colgroup>
-<col width="7%">
-<col width="8%">
-<col width="9%">
-<col width="15%">
-<col width="10%">
-<col width="8%">
-<col width="12%">
-<col width="6%">
-<col width="20%">
+<col width="1%">
+<col width="2%">
+<col width="2%">
+<col width="4%">
+<col width="3%">
+<col width="14%">
+<col width="3%">
+<col width="27%">
+<col width="27%">
+<col width="3%">
+<col width="3%">
+<col width="3%">
 </colgroup>
 <thead><tr class="header">
 <th align="right">index</th>
-<th align="left">season</th>
-<th align="left">episode</th>
+<th align="right">season</th>
+<th align="right">episode</th>
 <th align="left">episode_name</th>
 <th align="left">director</th>
 <th align="left">writer</th>
 <th align="left">character</th>
 <th align="left">text</th>
 <th align="left">text_w_direction</th>
+<th align="right">imdb_rating</th>
+<th align="right">total_votes</th>
+<th align="left">air_date</th>
 </tr></thead>
-<tbody></tbody>
+<tbody>
+<tr class="odd">
+<td align="right">1</td>
+<td align="right">1</td>
+<td align="right">1</td>
+<td align="left">Pilot</td>
+<td align="left">Ken Kwapis</td>
+<td align="left">Ricky Gervais;Stephen Merchant;Greg Daniels</td>
+<td align="left">Michael</td>
+<td align="left">All right Jim. Your quarterlies look very good. How are things at the library?</td>
+<td align="left">All right Jim. Your quarterlies look very good. How are things at the library?</td>
+<td align="right">7.6</td>
+<td align="right">3706</td>
+<td align="left">2005-03-24</td>
+</tr>
+<tr class="even">
+<td align="right">2</td>
+<td align="right">1</td>
+<td align="right">1</td>
+<td align="left">Pilot</td>
+<td align="left">Ken Kwapis</td>
+<td align="left">Ricky Gervais;Stephen Merchant;Greg Daniels</td>
+<td align="left">Jim</td>
+<td align="left">Oh, I told you. I couldn’t close it. So…</td>
+<td align="left">Oh, I told you. I couldn’t close it. So…</td>
+<td align="right">7.6</td>
+<td align="right">3706</td>
+<td align="left">2005-03-24</td>
+</tr>
+<tr class="odd">
+<td align="right">3</td>
+<td align="right">1</td>
+<td align="right">1</td>
+<td align="left">Pilot</td>
+<td align="left">Ken Kwapis</td>
+<td align="left">Ricky Gervais;Stephen Merchant;Greg Daniels</td>
+<td align="left">Michael</td>
+<td align="left">So you’ve come to the master for guidance? Is this what you’re saying, grasshopper?</td>
+<td align="left">So you’ve come to the master for guidance? Is this what you’re saying, grasshopper?</td>
+<td align="right">7.6</td>
+<td align="right">3706</td>
+<td align="left">2005-03-24</td>
+</tr>
+</tbody>
 </table>
 <p>So what we have is the season, episode number and name, character, the line spoken and the line spoken with the stage direction (cue).</p>
 <p>We can tokenize all of the lines with a few lines from the tidytext package:</p>
@@ -154,30 +206,79 @@
 <span>  <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html" class="external-link">filter</a></span><span class="op">(</span><span class="va">episode</span> <span class="op">==</span> <span class="fl">1</span><span class="op">)</span> <span class="op"><a href="../reference/pipe.html">%&gt;%</a></span></span>
 <span>  <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/slice.html" class="external-link">slice</a></span><span class="op">(</span><span class="fl">1</span><span class="op">:</span><span class="fl">3</span><span class="op">)</span> <span class="op"><a href="../reference/pipe.html">%&gt;%</a></span></span>
 <span>  <span class="fu">knitr</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/knitr/man/kable.html" class="external-link">kable</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
-<table class="table">
+<table style="width:100%;" class="table">
 <colgroup>
-<col width="7%">
-<col width="8%">
-<col width="9%">
-<col width="15%">
-<col width="10%">
-<col width="8%">
-<col width="12%">
+<col width="2%">
+<col width="3%">
+<col width="3%">
+<col width="5%">
+<col width="5%">
 <col width="20%">
-<col width="6%">
+<col width="4%">
+<col width="36%">
+<col width="5%">
+<col width="5%">
+<col width="5%">
+<col width="2%">
 </colgroup>
 <thead><tr class="header">
 <th align="right">index</th>
-<th align="left">season</th>
-<th align="left">episode</th>
+<th align="right">season</th>
+<th align="right">episode</th>
 <th align="left">episode_name</th>
 <th align="left">director</th>
 <th align="left">writer</th>
 <th align="left">character</th>
 <th align="left">text_w_direction</th>
+<th align="right">imdb_rating</th>
+<th align="right">total_votes</th>
+<th align="left">air_date</th>
 <th align="left">word</th>
 </tr></thead>
-<tbody></tbody>
+<tbody>
+<tr class="odd">
+<td align="right">1</td>
+<td align="right">1</td>
+<td align="right">1</td>
+<td align="left">Pilot</td>
+<td align="left">Ken Kwapis</td>
+<td align="left">Ricky Gervais;Stephen Merchant;Greg Daniels</td>
+<td align="left">Michael</td>
+<td align="left">All right Jim. Your quarterlies look very good. How are things at the library?</td>
+<td align="right">7.6</td>
+<td align="right">3706</td>
+<td align="left">2005-03-24</td>
+<td align="left">all</td>
+</tr>
+<tr class="even">
+<td align="right">1</td>
+<td align="right">1</td>
+<td align="right">1</td>
+<td align="left">Pilot</td>
+<td align="left">Ken Kwapis</td>
+<td align="left">Ricky Gervais;Stephen Merchant;Greg Daniels</td>
+<td align="left">Michael</td>
+<td align="left">All right Jim. Your quarterlies look very good. How are things at the library?</td>
+<td align="right">7.6</td>
+<td align="right">3706</td>
+<td align="left">2005-03-24</td>
+<td align="left">right</td>
+</tr>
+<tr class="odd">
+<td align="right">1</td>
+<td align="right">1</td>
+<td align="right">1</td>
+<td align="left">Pilot</td>
+<td align="left">Ken Kwapis</td>
+<td align="left">Ricky Gervais;Stephen Merchant;Greg Daniels</td>
+<td align="left">Michael</td>
+<td align="left">All right Jim. Your quarterlies look very good. How are things at the library?</td>
+<td align="right">7.6</td>
+<td align="right">3706</td>
+<td align="left">2005-03-24</td>
+<td align="left">jim</td>
+</tr>
+</tbody>
 </table>
 <p>If we want to analyze the entire data set, we need to remove some stop words first:</p>
 <div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
