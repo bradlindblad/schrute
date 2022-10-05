@@ -29,6 +29,9 @@ knitr::opts_chunk$set(
 
 Analyze and have fun with the text from the best series of all time
 
+## Companion App
+[the quotable office](https://bradleylindblad.shinyapps.io/QuotableOffice/) let's you search for your favorite office quotes
+
 ## Installation
 
 You can install the released version of schrute from [CRAN](https://CRAN.R-project.org) with:

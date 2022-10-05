@@ -20,6 +20,7 @@ Suggests:
     dplyr,
     ggplot2,
     knitr,
+    rcmdcheck,
     rmarkdown,
     stats,
     testthat (>= 2.1.0),
