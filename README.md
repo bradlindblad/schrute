@@ -17,6 +17,12 @@ downloads](https://cranlogs.r-pkg.org/badges/grand-total/schrute)](https://cran.
 
 Analyze and have fun with the text from the best series of all time
 
+## Companion App
+
+[the quotable
+office](https://bradleylindblad.shinyapps.io/QuotableOffice/) let’s you
+search for your favorite office quotes
+
 ## Installation
 
 You can install the released version of schrute from
@@ -37,7 +43,6 @@ Check out the data like so:
 ``` r
 library(schrute)
 library(tibble)
-#> Warning: package 'tibble' was built under R version 4.1.3
 
 tibble::glimpse(schrute::theoffice)
 #> Rows: 55,130
